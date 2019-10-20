@@ -11,6 +11,8 @@ docker-compose up --build
 ```
 Após as imagens web e mongo estarem criadas e em execução deverá ser executado o comando:
 ```dockerfile 
+docker exec -it (container_id ou container_name) python manage.py makemigrations
+docker exec -it (container_id ou container_name) python manage.py migrate
 docker exec -it (container_id ou container_name) python manage.py createsuperuser
 ```
 
